@@ -167,3 +167,53 @@ background-color: white;
 .btn:hover{
     cursor: pointer;
 }
+
+
+.popmain{
+    border-radius: 10px;
+    color:white;
+    position: absolute;
+    top: 1350px;
+    backdrop-filter:unset;
+    background-color: black;
+    height: 320px;
+    margin-left: 29.5%;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 17px;
+    padding-left: 120px;
+}
+
+.close{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.close:hover{
+    cursor: pointer;
+    background-color: rgb(189, 247, 247);
+    color: red;
+    font-size: 18px;
+}
+
+input{
+    width: 280px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+label{
+
+}
+
+.pop2{
+   padding: 20px 0px 0px 70px;
+}
+
+textarea{
+    width: 280px;
+    height: 70px;
+}

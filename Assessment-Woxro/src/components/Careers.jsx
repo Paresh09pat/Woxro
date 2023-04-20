@@ -2,7 +2,7 @@ import React from 'react'
 
 function Careers() {
   return (
-    <div>Careers</div>
+    <div style={{color:"white"}}>Careers</div>
   )
 }
 

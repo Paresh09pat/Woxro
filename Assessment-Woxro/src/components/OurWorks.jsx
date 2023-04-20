@@ -2,7 +2,7 @@ import React from 'react'
 
 function OurWorks() {
   return (
-    <div>OurWorks</div>
+    <div style={{color:"white"}}>OurWorks</div>
   )
 }
 

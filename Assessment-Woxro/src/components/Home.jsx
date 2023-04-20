@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Style.css"
 
 function Home() {
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);
+
     return (
         <div style={{ width: "90%", marginLeft: "5%" }}>
             {/* kerala text */}
@@ -62,11 +66,52 @@ function Home() {
                 </div>
 
                 <div className='subdiv2'>
-                    <button className='btn'> <img className='btnimg' src='https://i.pinimg.com/originals/32/72/7c/32727c67b89140a465140922d4d5c6c1.png' /> Contact Us </button>
-                    <button className='btn'> <img className='btnimg' src='https://i.pinimg.com/736x/d5/c8/aa/d5c8aaf2892cf9c6ebc0ec25a75ede69.jpg' /> Let's Talk</button>
+                    <button className='btn' onClick={() => setIsOpen(true)}> <img className='btnimg' src='https://i.pinimg.com/originals/32/72/7c/32727c67b89140a465140922d4d5c6c1.png' /> Contact Us </button>
+                    <button className='btn' onClick={() => setIsOpen1(true)}> <img className='btnimg' src='https://i.pinimg.com/736x/d5/c8/aa/d5c8aaf2892cf9c6ebc0ec25a75ede69.jpg' /> Let's Talk</button>
                 </div>
-
             </div>
+
+            {isOpen && (
+                <div className='popmain'>
+                    <div>
+                        <p>Office Address : <br />
+                            Leshore Business Park , <br />
+                            Thrissur ,  680004 <br />
+                            Kerala, India .
+                        </p>
+
+                        <p>
+                            Let's Talk <br />
+                            Office : +91 487 2080 212 <br />
+                            HR : +91 9778 800733 <br />
+                            UAE : +971 5825 04982
+                        </p>
+                    </div>
+                    <button className='close' onClick={() => setIsOpen(false)}>
+                        Close
+                    </button>
+                </div>
+            )}
+
+            {isOpen1 && (
+                <div className='popmain pop2'>
+                    <div>
+                        <form>
+                            <label> Name : <br /> <input type='text' /></label> <br />
+                            <label> Email : <br /> <input type='email' /></label> <br />
+                            <label> Contact : <br /> <input type='number' /></label>
+
+                            <textarea placeholder='Enter text here . . . '></textarea>
+
+                        </form>
+                    </div>
+
+                    <div>
+                        <button className='close' type='submit'> Submit </button>
+                        <button className='close' onClick={() => setIsOpen1(false)}>Close </button>
+                    </div>
+                </div>
+            )}
 
         </div>
     )

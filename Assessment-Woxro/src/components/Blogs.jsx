@@ -2,7 +2,7 @@ import React from 'react'
 
 function Blogs() {
   return (
-    <div>Blogs</div>
+    <div style={{color:"white"}}>Blogs</div>
   )
 }
 
